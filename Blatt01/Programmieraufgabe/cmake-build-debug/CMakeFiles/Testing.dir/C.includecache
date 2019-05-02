@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hibatullah/SoSe 2019/Sysprog/Programmieraufgabe/1. Hausaufgabe/Testing/main.c
+stdio.h
+-
+
