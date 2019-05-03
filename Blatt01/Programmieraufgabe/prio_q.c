@@ -92,7 +92,7 @@ void * prio_q_front(struct prio_q *q) {
 	//return data without changing the queue
 	//Please corect my program because the result will be true only 
 	//if I use q->first->next instead of just q->first
-	return q->first->next->data_elem;
+	return q->first->data_elem;
 
 }
 
