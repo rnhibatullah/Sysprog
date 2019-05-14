@@ -1,0 +1,53 @@
+2.3.
+
+
+a)
+Ein Prozess ist eine Instanziierung eines Programms für die Ausführung innerhalb eines Rechnersystems. Prozesse sind dynamisch, da sie zum Beispiel von unterschiedlichen Systemen auf unterschiedliche Arten ausgeführt werden.
+Prozesse werden benötigt, um ein Programm auf dem jeweiligen Rechnersystem ausführen zu können. 
+Um auf die Aussage “Prozesse sind instanziierte Programme” einzugehen, treffen wir folgende Aussage: Ein Prozess entsteht genau dann, wenn ein Befehl eines Programms von dem Prozessor ausgeführt wird.
+
+
+Quellen: 
+
+Christian Ullenboom: Java ist auch eine Insel. Einführung, Ausbildung, Praxis. 11., aktualisierte und überarbeitete Auflage, Galileo Computing: Bonn, 2014, S. 902.
+
+Foliensatz Prozesse Kao/Nordholdz (Folie 2 + 3)
+
+
+b)	Parallelität:
+		- Voraussetzung mehrere Prozessoren
+		- jedem Prozess wird ein Prozessor zugewiesen
+	- daraus folgt: mehrere Prozesse werden zur gleichen Zeit ausgeführt
+
+Nebenläufigkeit:
+	- um den Prozessor voll auszulasten und bei dem Nutzer den Eindruck zu erwecken, 	   dass Prozesse gleichzeitig ablaufen, werden verschiedene Prozesse verzahnt 		   ausgeführt (resign)
+	- Unterbrechung (block) eines laufenden Prozesses (z.B. durch Hardware Interrupt) 	   führt zur Ausführung eines anderen Teilprozesses bis ein weiterer Prozess 	   	   aufgenommen wird. 
+	
+
+	Quellen:
+	
+	Foliensatz Prozesse Kao/Nordholdz (Folie 12)
+
+c)
+	mögliche Ereignisse für Prozessumschaltung:
+		
+		- Zeitscheibe verbraucht
+		- Blockierender Systemaufruf
+	
+	Das Umschalten wird realisiert, indem die Registerinhalte des laufenden Prozesses im PCB 	abgespeichert werden (inklusive Befehlszähler und Stelle an dem der jeweilige Prozess 	unterbrochen wurde).
+	Danach wird der Prozesszustand auf blockiert gestellt. Sobald der Prozess wieder zum 	laufen gebracht wird, werden Inhalte aus dem PCB gelesen und der Prozessorzustand auf 	laufend gesetzt. Fortsetzung des Befehls an hinterlegter Stelle im PCB.
+
+	Quellen:
+	
+	Foliensatz Prozesse Kao/Nordholdz (Folie 18)
+
+
+d)
+	ein Prozess besteht aus mindestens einem (Userlevel-)Thread
+
+
+	Quellen:
+	
+	Foliensatz Prozesse Kao/Nordholdz (Folie 32, 33)
+
+	
