@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include "simple_ray/ray_default_scene.h"
+
+int main(int argc, char** argv)
+{
+	/* TODO: check and parse command line arguments */
+
+
+	//checkt ob genug Eingabeparameter beim Programmstart eingegeben wurden:
+	if (argc!=4)
+	{
+		printf("Fehlermeldung: nicht die richtigen Eingabeparameter beim Öffnen des Programms!\n");
+		printf("Hinweis: <Anzahl der Prozesse> <Auflösung> <Anzahl der Samples>\n");
+		return 0;
+	}
+
+
+	//checkt ob die Anzahl der Prozesse im richtigen Intervall sind.
+	if (atoi(argv[1]) > 128 || atoi(argv[1]) < 1)
+	{
+		printf("Fehlermeldung: Anzahl der Prozesse muss ein zwischen 1 und 128 liegen!\n");
+		return 0;
+	}
+
+
+	//checkt ob die Auflösung im richtigen Intervall sind.
+	if (atoi(argv[2]) > 1000 || atoi(argv[2]) < 1)
+	{
+		printf("Fehlermeldung: Die Auflösung muss ein zwischen 1 und 1000 liegen!\n");
+		return 0;
+	}
+
+
+	//checkt ob die Anzahl der Samples mindestens 1 ist.
+	if (atoi(argv[3])<1)
+	{
+		printf("Fehlermeldung: Anzahl der Samples muss mindestens 1 sein!\n");
+		return 0;
+	}
+
+
+	//gibt die Eingbeparameter wie aufgefordert aus:
+	printf("Anzahl der Prozesse %d\n", atoi(argv[1]));
+	printf("Auflösung: %d\n", atoi(argv[2]));
+	printf("Anzahl der Samples %d\n", atoi(argv[3]));	
+	
+
+	/* initialize scene */
+	ray_Scene* scene = ray_createDefaultScene();
+
+	/* TODO: divide work load and create n child processes */
+
+	FKT die die Auflösung in einzelne Teilbereiche entsprechend der Anzahl der Prozesse unterteilt und ein bmp_Rect erstellt
+	dieses bmp_Rect wird der folgenden FKT gegeben
+
+	ray_renderScene(const bmp_Rect * canvas, int resolution_w, int resolution_h,
+							int samples, scene, ProzessName)
+
+	Rückgabewert der vorhigen FKT ist ein bmp_Image
+	dieses wird der nächsten FKT gegeben und dort abgespeichert!
+
+	bmp_saveToFile(const bmp_Image * img, DateiName)
+
+
+	/* TODO: each child process renders it's part of the image and saves it to an individual file;
+			 the parent process meanwhile waits for children to finish their work
+	*/
+
+	/* TODO: parent process loads all files and merges them into a single image */
+
+	/* TODO: save final image to file "final.bmp" */
+
+
+	/* free memory */
+	ray_freeScene(scene);
+	/* TODO: make sure to free all allocated memory */
+	
+	return 0;
+}
