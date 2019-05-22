@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o CMakeFiles/vorgabe.dir/simple_ray/ray.c.o CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o CMakeFiles/vorgabe.dir/main.c.o  -o vorgabe 
