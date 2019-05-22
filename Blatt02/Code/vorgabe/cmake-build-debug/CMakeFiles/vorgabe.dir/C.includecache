@@ -1,0 +1,52 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/main.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/wait.h
+-
+simple_ray/ray_default_scene.h
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/ray_default_scene.h
+
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/bmp.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdint.h
+-
+
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/ray.h
+ray_settings.h
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/ray_settings.h
+ray_math.h
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/ray_math.h
+bmp.h
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/bmp.h
+
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/ray_default_scene.h
+ray.h
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/ray.h
+
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/ray_math.h
+math.h
+-
+string.h
+-
+stdio.h
+-
+
+/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/vorgabe/simple_ray/ray_settings.h
+
