@@ -123,7 +123,7 @@ int main(int argc, char** argv)
 	bmp_Image * load_from_data_part_rendered = malloc(sizeof(bmp_Image));
 	load_from_data_part_rendered = bmp_loadFromData(Auflosung,Auflosung,NULL);
 
-	for (int i = 0; i < Anzahl_prozesse; ++i){
+	for(int i = 0; i < Anzahl_prozesse; ++i){
 	
 
 			//file name for bmp
@@ -153,7 +153,7 @@ int main(int argc, char** argv)
 	//free(load_from_data_part_rendered);
 
 	//free part*
-	for (int i = 0; i < Anzahl_prozesse; ++i){
+	for (int i = Anzahl_prozesse+1; i >= 0; --i){
 		free(part);
 	}
 
