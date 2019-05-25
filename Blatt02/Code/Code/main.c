@@ -13,17 +13,17 @@ int main(int argc, char** argv)
         int Samples = atoi(argv[3]);
 
         if (Anzahl_prozesse<1 || Anzahl_prozesse>128){
-            perror("Anzahlprozesse nicht im wertebereich");
+            perror("Anzahlprozesse nicht im Wertebereich");
             return -1;
         };
 
         if (Auflosung<1 || Auflosung>10000){
-            perror("Auflosung nicht im wertebereich");
+            perror("Auflosung nicht im Wertebereich");
             return -1;
         };
 
         if (Samples<1){
-            perror("Samples nicht im wertebereich");
+            perror("Samples nicht im Wertebereich");
             return -1;
         };
 
@@ -33,10 +33,11 @@ int main(int argc, char** argv)
 
 	/* TODO: divide work load and create n child processes */
 
-	//create bmp rect to save the geteilte bild.
+	//create bmp rect to save the geteilte Bild.
+	//Vielleicht Format ändern?
 	bmp_Rect *part = calloc(sizeof(bmp_Rect),Anzahl_prozesse+1);
 	
-	//create array for x value ( to enhance the image verteilung in x achse)
+	//create array for x value ( to enhance the image Verteilung in x-Achse)
 	int *part_auflosung = malloc(sizeof(int)* Anzahl_prozesse);
 
 	//divide picture for every process
@@ -54,7 +55,7 @@ int main(int argc, char** argv)
 	int initial_x = 0;
 	for (int i = 0; i < Anzahl_prozesse; ++i)
 	{
-		part[i].x = initial_x * part_auflosung[i]; //x cordinates start from 0.  
+		part[i].x = initial_x * part_auflosung[i]; //x coordinates start from 0.
 		part[i].y = 0;
 		part[i].w = part_auflosung[i];
 		part[i].h = Auflosung;
@@ -62,28 +63,26 @@ int main(int argc, char** argv)
 	}
 
 	//process calling
-	int *pid = malloc(sizeof(int)*Anzahl_prozesse);
+	int *pid = malloc(sizeof(int)*Anzahl_prozesse); //(int*)???
 	int id=-1; //id for parent process ist -1
-	for (int i = 0; i < Anzahl_prozesse; ++i)
-	{
+	for (int i = 0; i < Anzahl_prozesse; ++i){
 		pid[i]=fork();
-		if (pid[i]==0)
-		{
-			id=i; //child process id ist all number execept -1
+
+		if (pid[i]==0){
+			id=i; //child process id are all numbers except -1
 			break;
 		}
 	}
 
-	/* TODO: each child process renders it's part of the image and saves it to an individual file;
+	/* TODO:each child process renders it's part of the image and saves it to an individual file;
 			 the parent process meanwhile waits for children to finish their work
 	*/
 
 	
 
-	//for all process execpt parent 
+	//for all process except parent
 	if(id == -1){
-		for(int i = 0;i < Anzahl_prozesse;i++)
-		{
+		for(int i = 0;i < Anzahl_prozesse;i++){
 			waitpid(pid[i],NULL,0);
 		}
 
@@ -101,16 +100,22 @@ int main(int argc, char** argv)
 
 		//save the part_rendered image
 		bmp_Image* part_rendered = malloc(sizeof(bmp_Image));
-		part_rendered = ray_renderScene((part+id),Auflosung,Auflosung,Samples,scene,processname);
+
+		//part punkt-notation notwendig um auf Variablen zugreifen zu können???
+        part_rendered = ray_renderScene((part+id),Auflosung,Auflosung,Samples,scene,processname);
 			
 		//save the part_rendered image to file
 		bmp_saveToFile(part_rendered,filename);
 		bmp_free(part_rendered);
 
+		/*
+		  for(int i = 0; i<Anzahl_prozesse; i++){
+		  part_rendered = ray_renderScene((part+id),part.w[i],Auflosung,Samples,scene,processname);
+		  }
+		 */
+
 		
 	}
-
-
 
 	/* TODO: parent process loads all files and merges them into a single image */
 
@@ -118,8 +123,7 @@ int main(int argc, char** argv)
 	bmp_Image * load_from_data_part_rendered = malloc(sizeof(bmp_Image));
 	load_from_data_part_rendered = bmp_loadFromData(Auflosung,Auflosung,NULL);
 
-	for (int i = 0; i < Anzahl_prozesse; ++i)
-	{
+	for (int i = 0; i < Anzahl_prozesse; ++i){
 	
 
 			//file name for bmp
@@ -135,7 +139,6 @@ int main(int argc, char** argv)
 
 	}
 
-
 	/* TODO: save final image to file "final.bmp" */
 	//file name for bmp
 	char filename[10];
@@ -150,18 +153,18 @@ int main(int argc, char** argv)
 	//free(load_from_data_part_rendered);
 
 	//free part*
-	for (int i = 0; i < Anzahl_prozesse; ++i)
-	{
+	for (int i = 0; i < Anzahl_prozesse; ++i){
 		free(part);
 	}
+
 	free(part);
 
 
 	//free part_auflosung
-	for (int i = 0; i < Anzahl_prozesse; ++i)
-	{
+	for (int i = 0; i < Anzahl_prozesse; ++i){
 		free(part_auflosung);
 	}
+
 	free(part_auflosung);
 
 
