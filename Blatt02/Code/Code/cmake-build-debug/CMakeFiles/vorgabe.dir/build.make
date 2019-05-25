@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/hibatullah/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.69/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/hibatullah/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6707.69/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code"
+CMAKE_SOURCE_DIR = /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/vorgabe.dir/depend.make
@@ -59,68 +59,68 @@ include CMakeFiles/vorgabe.dir/flags.make
 
 CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o: CMakeFiles/vorgabe.dir/flags.make
 CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o: ../simple_ray/bmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o   -c "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/bmp.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o   -c /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/bmp.c
 
 CMakeFiles/vorgabe.dir/simple_ray/bmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vorgabe.dir/simple_ray/bmp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/bmp.c" > CMakeFiles/vorgabe.dir/simple_ray/bmp.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/bmp.c > CMakeFiles/vorgabe.dir/simple_ray/bmp.c.i
 
 CMakeFiles/vorgabe.dir/simple_ray/bmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vorgabe.dir/simple_ray/bmp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/bmp.c" -o CMakeFiles/vorgabe.dir/simple_ray/bmp.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/bmp.c -o CMakeFiles/vorgabe.dir/simple_ray/bmp.c.s
 
 CMakeFiles/vorgabe.dir/simple_ray/ray.c.o: CMakeFiles/vorgabe.dir/flags.make
 CMakeFiles/vorgabe.dir/simple_ray/ray.c.o: ../simple_ray/ray.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/vorgabe.dir/simple_ray/ray.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/simple_ray/ray.c.o   -c "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/vorgabe.dir/simple_ray/ray.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/simple_ray/ray.c.o   -c /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray.c
 
 CMakeFiles/vorgabe.dir/simple_ray/ray.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vorgabe.dir/simple_ray/ray.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray.c" > CMakeFiles/vorgabe.dir/simple_ray/ray.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray.c > CMakeFiles/vorgabe.dir/simple_ray/ray.c.i
 
 CMakeFiles/vorgabe.dir/simple_ray/ray.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vorgabe.dir/simple_ray/ray.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray.c" -o CMakeFiles/vorgabe.dir/simple_ray/ray.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray.c -o CMakeFiles/vorgabe.dir/simple_ray/ray.c.s
 
 CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o: CMakeFiles/vorgabe.dir/flags.make
 CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o: ../simple_ray/ray_default_scene.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o   -c "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_default_scene.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o   -c /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_default_scene.c
 
 CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_default_scene.c" > CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_default_scene.c > CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.i
 
 CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_default_scene.c" -o CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_default_scene.c -o CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.s
 
 CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o: CMakeFiles/vorgabe.dir/flags.make
 CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o: ../simple_ray/ray_math.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o   -c "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_math.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o   -c /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_math.c
 
 CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_math.c" > CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_math.c > CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.i
 
 CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_math.c" -o CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_math.c -o CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.s
 
 CMakeFiles/vorgabe.dir/main.c.o: CMakeFiles/vorgabe.dir/flags.make
 CMakeFiles/vorgabe.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/vorgabe.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/main.c.o   -c "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/vorgabe.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vorgabe.dir/main.c.o   -c /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/main.c
 
 CMakeFiles/vorgabe.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vorgabe.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/main.c" > CMakeFiles/vorgabe.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/main.c > CMakeFiles/vorgabe.dir/main.c.i
 
 CMakeFiles/vorgabe.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vorgabe.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/main.c" -o CMakeFiles/vorgabe.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/main.c -o CMakeFiles/vorgabe.dir/main.c.s
 
 # Object files for target vorgabe
 vorgabe_OBJECTS = \
@@ -140,7 +140,7 @@ vorgabe: CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o
 vorgabe: CMakeFiles/vorgabe.dir/main.c.o
 vorgabe: CMakeFiles/vorgabe.dir/build.make
 vorgabe: CMakeFiles/vorgabe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable vorgabe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable vorgabe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vorgabe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/vorgabe.dir/clean:
 .PHONY : CMakeFiles/vorgabe.dir/clean
 
 CMakeFiles/vorgabe.dir/depend:
-	cd "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug /Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/vorgabe.dir/depend
 

@@ -8,109 +8,109 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug"/>
+				<Option working_dir="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug"/>
+				<Option working_dir="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="vorgabe">
-				<Option output="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/vorgabe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 vorgabe"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="vorgabe/fast">
-				<Option output="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/vorgabe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 vorgabe/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug"/>
+				<Option working_dir="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hibatullah/Uni/SoSe\ 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vorgabe">
+				<Option output="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/vorgabe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 vorgabe"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vorgabe/fast">
+				<Option output="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/vorgabe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 vorgabe/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/main.c">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/main.c">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/bmp.c">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/bmp.c">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/bmp.h">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/bmp.h">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray.c">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray.c">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray.h">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray.h">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_default_scene.c">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_default_scene.c">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_default_scene.h">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_default_scene.h">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_math.c">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_math.c">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_math.h">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_math.h">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_settings.h">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_settings.h">
 			<Option target="vorgabe"/>
 		</Unit>
-		<Unit filename="/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/CMakeLists.txt">
+		<Unit filename="/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

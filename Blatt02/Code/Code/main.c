@@ -4,8 +4,8 @@
 #include <sys/wait.h>
 #include "simple_ray/ray_default_scene.h"
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv){
+
 	/* TODO: check and parse command line arguments */
 	//void checking_parameter(argv){
         int Anzahl_prozesse = atoi(argv[1]);
@@ -41,10 +41,10 @@ int main(int argc, char** argv)
 	int *part_auflosung = malloc(sizeof(int)* Anzahl_prozesse);
 
 	//divide picture for every process
-	for (int i = 0; i < Anzahl_prozesse; ++i)
-	{
+	for (int i = 0; i < Anzahl_prozesse; ++i){
+
 		if (i== Anzahl_prozesse-1) //for the last process
-		{
+		     {
 			part_auflosung[i]=(Auflosung/Anzahl_prozesse)+(Auflosung%Anzahl_prozesse);
 		}else{ //for normal process
 			part_auflosung[i]=Auflosung/Anzahl_prozesse;
@@ -53,8 +53,8 @@ int main(int argc, char** argv)
 
 	//initializing values for bmp rect.
 	int initial_x = 0;
-	for (int i = 0; i < Anzahl_prozesse; ++i)
-	{
+	for (int i = 0; i < Anzahl_prozesse; ++i){
+
 		part[i].x = initial_x * part_auflosung[i]; //x coordinates start from 0.
 		part[i].y = 0;
 		part[i].w = part_auflosung[i];
@@ -86,12 +86,12 @@ int main(int argc, char** argv)
 			waitpid(pid[i],NULL,0);
 		}
 
-	}else{
+	}
+	else{
 
 		//file name for bmp
 		char filename[9];
 		sprintf(filename,"img%d.bmp",id);
-
 
 
 		//process progress name
@@ -114,7 +114,6 @@ int main(int argc, char** argv)
 		  }
 		 */
 
-		
 	}
 
 	/* TODO: parent process loads all files and merges them into a single image */
@@ -138,7 +137,6 @@ int main(int argc, char** argv)
 			bmp_stamp(load_part_rendered, load_from_data_part_rendered,part[i].x,part[i].y);
 
 	}
-
 	/* TODO: save final image to file "final.bmp" */
 	//file name for bmp
 	char filename[10];
@@ -153,20 +151,22 @@ int main(int argc, char** argv)
 	//free(load_from_data_part_rendered);
 
 	//free part*
-	for (int i = Anzahl_prozesse+1; i >= 0; --i){
+    for (int i = Anzahl_prozesse; i >= 0 ; ++i){
 		free(part);
 	}
 
 	free(part);
 
-
 	//free part_auflosung
-	for (int i = 0; i < Anzahl_prozesse; ++i){
+	for (int i = Anzahl_prozesse; i >= 0 ; ++i){
 		free(part_auflosung);
+		free(pid);
+		free(load_from_data_part_rendered);
 	}
 
 	free(part_auflosung);
 
+	free(load_from_data_part_rendered);
 
 	/* TODO: make sure to free all allocated memory */
 	//ray_freeScene(scene);

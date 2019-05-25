@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/main.c" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/main.c.o"
-  "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/bmp.c" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o"
-  "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray.c" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/simple_ray/ray.c.o"
-  "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_default_scene.c" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o"
-  "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/simple_ray/ray_math.c" "/home/hibatullah/Uni/SoSe 2019/Sysprog/Programmieraufgabe/2.Hausaufgabe/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o"
+  "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/main.c" "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/main.c.o"
+  "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/bmp.c" "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/simple_ray/bmp.c.o"
+  "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray.c" "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/simple_ray/ray.c.o"
+  "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_default_scene.c" "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/simple_ray/ray_default_scene.c.o"
+  "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/simple_ray/ray_math.c" "/Users/lisabronowsky/Documents/Sysprog/Blatt02/Code/Code/cmake-build-debug/CMakeFiles/vorgabe.dir/simple_ray/ray_math.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
