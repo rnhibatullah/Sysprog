@@ -23,25 +23,33 @@ int init_SJN()
 
     //Queue* queue_new(int (*comparator)(const void *a, const void *b))
 	//{
-		int (*comparator)(const void *a, const void *b);
-		Queue *queue = (Queue*) malloc(sizeof(Queue));
-		if (!queue)
-		{
-			printf("Could not allocate memory for priority queue.\n");
-			exit(1);
-		}
-		if (comparator == NULL)
-		{
-			printf("queue_new: No comparator given...\n");
-			exit(1);
-		}
-		else
-		{
-			queue->comparator = comparator;
-		}
-		queue->size = 0;
-		queue->head = NULL;
+	/*int (*comparator)(const void *a, const void *b);
+	Queue *queue = (Queue*) malloc(sizeof(Queue));
+	if (!queue)
+	{
+		printf("Could not allocate memory for priority queue.\n");
+		exit(1);
+	}
+	if (comparator == NULL)
+	{
+		printf("queue_new: No comparator given...\n");
+		exit(1);
+	}
+	else
+	{
+		queue->comparator = comparator;
+	}*/
+	static Queue* queue = (Queue*) malloc(sizeof(Queue));
+	queue->size = 0;
+	queue->head = NULL;
 
+	if(!queue){
+		return 1;
+	}
+	//succes
+	else{
+		return 0;
+	}
 		//return queue;
 	//}	
 	//initialisiere task
@@ -51,13 +59,7 @@ int init_SJN()
     def_task->length = 0;*/
 
 
-	if(!queue){
-		return 1;
-	}
-	//succes
-	else{
-		return 0;
-	}
+	
 }
 
 void free_SJN()
@@ -65,8 +67,8 @@ void free_SJN()
     // TODO
     //queue_free(*queue);
 
-    /*void queue_free(Queue *queue)
-	{
+    //void queue_free(Queue *queue)
+	//{
 	q_elem *current = queue->head;
 	q_elem *toDelete;
 	while (current != NULL)
@@ -77,17 +79,15 @@ void free_SJN()
 		free(toDelete);
 	}
 	free(queue);
-	}*/
+	//}
 }
 
 void arrive_SJN(int id, int length)
 {
     // TODO
-	//queue_offer(*queue, *task);
+	//queue_offer(queue, task);
 
-		void* queue_offer(Queue *queue, def_task *task)
-	{
-		//Neues Element wird in Queue eingefügt
+		//Neues Element wird ans Ende der Queue eingefügt
 		q_elem* newElem = (q_elem*) malloc(sizeof(q_elem));
 		if (!newElem)
 		{
@@ -95,16 +95,15 @@ void arrive_SJN(int id, int length)
 			exit(1);
 		}
 
+		def_task* task;
 		newElem->task = task;
+		task->length = length;
+		task->id = id;
 
 		q_elem *current;
 		q_elem *last = NULL;
 		for (current = queue->head; current != NULL; current = current->next)
 		{
-			if (queue->comparator(current->task, newElem->task) > 0)
-			{
-				break;
-			}
 			last = current;
 		}
 		newElem->next = current;
@@ -113,11 +112,10 @@ void arrive_SJN(int id, int length)
 		} else {
 		    queue->head = newElem;
 		}
-
 		queue->size++;
 
 		//sortiere Queue nach Priorität(task->length)
-		q_elem *shortest_job;
+		q_elem* shortest_job;
 		shortest_job = queue->head;
 		for (current = queue->head; current != NULL; current = current->next){
 
@@ -131,22 +129,62 @@ void arrive_SJN(int id, int length)
 				}
 			}
 		}
-		task = shortest_job->task;
+		static def_task* shortest_task = shortest_job->task;
+		return shortest_task;
+
 		//if(queue->comparator(current->task, newElem->task) = 0){
 
-		return task;
-	}
+		//return task;
+	
 
 }
 
 def_task *tick_SJN()
 {
     // TODO
+	
+	static int remaining_runtime = shortest_task->length;
 
-    return NULL;
+	if (queue->size == 0){
+
+		return NULL;
+	}
+	else{
+
+		def_task* running_task = shortest_task;
+		return running_task;
+	}
+	
+
+	
+
+		
+	/*for(int remaining_runtime = queue->head->task->length; remaining_runtime > 1; remaining_runtime--){
+
+			finish_task_SJN(*queue, remaining_runtime);
+		}*/
+	//if()
+
+	/*for(remaining_runtime = queue->head->task->length; remaining_runtime > 1; remaining_runtime--){
+
+		return queue->head->task;
+	}
+
+	if(remaining_runtime = 1){
+
+	q_elem *newHead = queue->head->next;
+	def_task* task = queue->head->task;
+	free(queue->head);
+	queue->head = newHead;
+	queue->size--;
+	return task;
+	}
+
+    //return NULL;
 }
 
-void finish_task_SJN()
+void finish_task_SJN(Queue *queue, int remaining_runtime)
 {
     // TODO optional
+    return queue->head->task;
 }
