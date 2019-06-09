@@ -39,6 +39,12 @@ int init_SJN()
 	{
 		queue->comparator = comparator;
 	}*/
+	static int remaining_runtime = 0;
+
+	static def_task* shortest_task;
+	shortest_task->length = 0;
+	shortest_task->id = 0;
+
 	static Queue* queue = (Queue*) malloc(sizeof(Queue));
 	queue->size = 0;
 	queue->head = NULL;
@@ -87,7 +93,7 @@ void arrive_SJN(int id, int length)
     // TODO
 	//queue_offer(queue, task);
 
-		//Neues Element wird ans Ende der Queue eingefügt
+		
 		q_elem* newElem = (q_elem*) malloc(sizeof(q_elem));
 		if (!newElem)
 		{
@@ -99,38 +105,61 @@ void arrive_SJN(int id, int length)
 		newElem->task = task;
 		task->length = length;
 		task->id = id;
+		newElem->next = NULL;
 
-		q_elem *current;
-		q_elem *last = NULL;
-		for (current = queue->head; current != NULL; current = current->next)
-		{
-			last = current;
-		}
-		newElem->next = current;
-		if (last != NULL) {
-		    last->next = newElem;
-		} else {
-		    queue->head = newElem;
-		}
-		queue->size++;
+		//Wenn Queue leer ist und kein anderer Task ausgeführt wird, wird der neue Task ausgeführt
+		if(queue->size == 0 && remaining_runtime == 0){
 
-		//sortiere Queue nach Priorität(task->length)
-		q_elem* shortest_job;
-		shortest_job = queue->head;
-		for (current = queue->head; current != NULL; current = current->next){
-
-			if(current->task->length <= shortest_job->task->length){
-
-				if(current->task->length < current->next->task->length){
-					shortest_job = current;
-				}
-				else{
-					shortest_job = current->next;
-				}
+			if(remaining_runtime == 0){
+				running_task = newElem->task;
+				remaining_runtime = newElem->task->length;
+				return;
 			}
 		}
-		static def_task* shortest_task = shortest_job->task;
-		return shortest_task;
+		//Wenn Queue leer ist aber anderer Task ausgeführt wird, wird der neue Task in die Queue zum Warten geschickt
+		else if(queue->size == 0 && remaining_runtime != 0){
+
+			queue->head = newElem;
+			newElem->next = NULL;
+			queue->size++;
+			return;
+		}
+		
+		//Falls Queue nicht leer ist
+		else if(queue->size != 0){
+			//Neues Element wird ans Ende der Queue eingefügt
+			q_elem* current;
+			q_elem* last = NULL;
+			for (current = queue->head; current != NULL; current = current->next)
+			{
+				last = current;
+			}
+			newElem->next = current;
+			if (last != NULL) {
+			    last->next = newElem;
+			} else {
+			    queue->head = newElem;
+			}
+			queue->size++;
+
+			//sortiere Queue nach Priorität(task->length)
+			q_elem* shortest_job;
+			shortest_job = queue->head;
+			for (current = queue->head; current != NULL; current = current->next){
+
+				if(current->task->length <= shortest_job->task->length){
+
+					if(current->task->length < current->next->task->length){
+						shortest_job = current;
+					}
+					else{
+						shortest_job = current->next;
+					}
+				}
+			}
+			shortest_task = shortest_job->task;
+		}	
+		
 
 		//if(queue->comparator(current->task, newElem->task) = 0){
 
@@ -143,18 +172,19 @@ def_task *tick_SJN()
 {
     // TODO
 	
-	static int remaining_runtime = shortest_task->length;
+	remaining_runtime = shortest_task->length;
 
 	if (queue->size == 0){
 
 		return NULL;
 	}
-	else{
+	else if(remaining_runtime > 0){
 
 		def_task* running_task = shortest_task;
 		return running_task;
 	}
 	
+	remaining_runtime--;
 
 	
 
