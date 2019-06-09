@@ -45,7 +45,7 @@ int init_SJN()
 	shortest_task->length = 0;
 	shortest_task->id = 0;
 
-	static Queue* queue = (Queue*) malloc(sizeof(Queue));
+	static Queue* queue = (Queue*) malloc(sizeof(queue));
 	queue->size = 0;
 	queue->head = NULL;
 
@@ -110,12 +110,12 @@ void arrive_SJN(int id, int length)
 		//Wenn Queue leer ist und kein anderer Task ausgeführt wird, wird der neue Task ausgeführt
 		if(queue->size == 0 && remaining_runtime == 0){
 
-			if(remaining_runtime == 0){
 				running_task = newElem->task;
+				shortest_task = newElem->task;
 				remaining_runtime = newElem->task->length;
 				return;
 			}
-		}
+		
 		//Wenn Queue leer ist aber anderer Task ausgeführt wird, wird der neue Task in die Queue zum Warten geschickt
 		else if(queue->size == 0 && remaining_runtime != 0){
 
@@ -174,20 +174,27 @@ def_task *tick_SJN()
 	
 	remaining_runtime = shortest_task->length;
 
-	if (queue->size == 0){
+	if (queue->size == 0 && remaining_runtime == 0){
 
+		running_task = NULL;
 		return NULL;
 	}
+
+	if (queue->size != 0 && remaining_runtime == 0){
+
+		running_task = shortest_task;
+		remaining_runtime = shortest_task->length;
+		return running_task;
+	}
+
 	else if(remaining_runtime > 0){
 
-		def_task* running_task = shortest_task;
+		/*def_task* running_task = shortest_task;
+		return running_task;*/
+		remaining_runtime--;
 		return running_task;
 	}
 	
-	remaining_runtime--;
-
-	
-
 		
 	/*for(int remaining_runtime = queue->head->task->length; remaining_runtime > 1; remaining_runtime--){
 
@@ -210,11 +217,11 @@ def_task *tick_SJN()
 	return task;
 	}
 
-    //return NULL;
+    //return NULL;*/
 }
 
 void finish_task_SJN(Queue *queue, int remaining_runtime)
 {
     // TODO optional
-    return queue->head->task;
+    //return queue->head->task;
 }
