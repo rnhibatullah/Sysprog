@@ -5,53 +5,32 @@
 #include <stdio.h>
 
 	//definieren der Globalen Variablen
-	static int remaining_runtime = 0;
 
-	static def_task* shortest_task;
-	shortest_task->length = 0;
-	shortest_task->id = 0;
+typedef struct own_Queue
+{
+    int size;
+    q_elem *head;
+}own_Queue;
 
-	static Queue* queue = (Queue*) malloc(sizeof(queue));
-	queue->size = 0;
-	queue->head = NULL;
+	
+static int remaining_runtime;
 
+static def_task* shortest_task;
+	
+static own_Queue* queue;
+	
 
 int init_SJN()
 {
     // TODO
-    /*def_task* task = malloc(sizeof(task));
-    def_task.id = 0;
-    def_task.length = 0;
+	shortest_task->length = 0;
+	shortest_task->id = 0;
 
-    q_elem* queue = (q_elem*) malloc(sizeof(q_elem));
-    q_elem->task = task;
-    q_elem->next = NULL;
+	queue = (own_Queue*) malloc(sizeof(own_Queue));
+	queue->size = 0;
+	queue->head = NULL;
 
-    if(def_task.id = 0 && def_task.length = 0)*/
-
-	//Initialisiere Queue
-    //queue_new(*a, *b);
-
-
-    //Queue* queue_new(int (*comparator)(const void *a, const void *b))
-	//{
-	/*int (*comparator)(const void *a, const void *b);
-	Queue *queue = (Queue*) malloc(sizeof(Queue));
-	if (!queue)
-	{
-		printf("Could not allocate memory for priority queue.\n");
-		exit(1);
-	}
-	if (comparator == NULL)
-	{
-		printf("queue_new: No comparator given...\n");
-		exit(1);
-	}
-	else
-	{
-		queue->comparator = comparator;
-	}*/
-	
+	remaining_runtime = 0;
 
 	if(!queue){
 		return 1;
@@ -60,16 +39,6 @@ int init_SJN()
 	else{
 		return 0;
 	}
-		//return queue;
-	//}	
-	//initialisiere task
-	//ich glaube ich brauche das nicht, weil task statisch in den Funktionsköpfen alloziert wird
-	/*def_task* task = (def_task*) malloc(sizeof(task));
-    def_task->id = 0;
-    def_task->length = 0;*/
-
-
-	
 }
 
 void free_SJN()
@@ -198,30 +167,6 @@ def_task *tick_SJN()
 		remaining_runtime--;
 		return running_task;
 	}
-	
-		
-	/*for(int remaining_runtime = queue->head->task->length; remaining_runtime > 1; remaining_runtime--){
-
-			finish_task_SJN(*queue, remaining_runtime);
-		}*/
-	//if()
-
-	/*for(remaining_runtime = queue->head->task->length; remaining_runtime > 1; remaining_runtime--){
-
-		return queue->head->task;
-	}
-
-	if(remaining_runtime = 1){
-
-	q_elem *newHead = queue->head->next;
-	def_task* task = queue->head->task;
-	free(queue->head);
-	queue->head = newHead;
-	queue->size--;
-	return task;
-	}
-
-    //return NULL;*/
 }
 
 void finish_task_SJN(Queue *queue, int remaining_runtime)

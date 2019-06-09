@@ -216,6 +216,8 @@ int main(int argc, char **argv)
         tick_SJN();
         printf("%i ", running_task == NULL ? -1 : running_task->id);
         free_SJN();
+    }else{
+        printf("init gibt nicht 0 zurück");
     }
 
     if (init_MLF(1,3) == 0) {
