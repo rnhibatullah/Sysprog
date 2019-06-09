@@ -4,6 +4,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+	//definieren der Globalen Variablen
+	static int remaining_runtime = 0;
+
+	static def_task* shortest_task;
+	shortest_task->length = 0;
+	shortest_task->id = 0;
+
+	static Queue* queue = (Queue*) malloc(sizeof(queue));
+	queue->size = 0;
+	queue->head = NULL;
+
+
 int init_SJN()
 {
     // TODO
@@ -39,15 +51,7 @@ int init_SJN()
 	{
 		queue->comparator = comparator;
 	}*/
-	static int remaining_runtime = 0;
-
-	static def_task* shortest_task;
-	shortest_task->length = 0;
-	shortest_task->id = 0;
-
-	static Queue* queue = (Queue*) malloc(sizeof(queue));
-	queue->size = 0;
-	queue->head = NULL;
+	
 
 	if(!queue){
 		return 1;
