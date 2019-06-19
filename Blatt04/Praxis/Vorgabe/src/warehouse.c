@@ -3,12 +3,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+//Mutex warehouse_m;
+
 struct warehouse{
     unsigned int flour, sugar, choclate;
     int locked;
     
     unsigned int sugar_taken, flour_taken, choclate_taken;
     //TODO
+    //Initialize signals for get and deposit functions
 
     
 };
@@ -25,7 +28,7 @@ warehouse* warehouse_create(){
     new_warehouse->locked = 0;
 
     //signal()
-    // wait()
+    //wait()
     //TODO
     
     new_warehouse->choclate_taken = 0;

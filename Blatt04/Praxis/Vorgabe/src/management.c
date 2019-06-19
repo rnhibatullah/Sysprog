@@ -131,8 +131,8 @@ unsigned int management_destroy(management* m){
             order_destroy(tmp);
         }
         order_list_destroy(m->orders_in);
-        //unlock(ordersIn_m);
 
+        //unlock(ordersIn_m);
         //Printing summaray
         unsigned int sum_of_muffin = 0;
         for(int i = 0; i<MAX_ORDERS && m->orders_finished[i] != NULL;++i){
