@@ -5,8 +5,60 @@ int check_initial_state(matrix* f, matrix* G)
 	/*TODO
 			Testen, ob kein Prozess mehr Resourcen benötigt, als insgesamt verfügbar sind
 	*/
+	int counter = 0;
+	int j;
+	int Matrixelemente = (G->n) * (G->m);
 
-	return 0;
+	for(int i = 0; i < f -> n; i++){
+
+		j = i;
+		while(j < Matrixelemente){
+
+			if(G->elements[j] <= f -> elements[i]){
+				int x = j+1;
+				int l = i+1;
+				counter++;
+				while(l < f->n){
+					if(G->elements[x] > f -> elements[l]){
+						break;
+					}
+					else{counter++;}
+					l++;
+					x++;
+				}
+			}
+		}
+			j = j + f -> n;
+	}
+	if(counter/(f->n) >= 1){
+		return 1;
+	}
+	
+	/*
+	int counter1 = 0;
+	int counter2 = 0;
+	int Matrixelemente = (G->n) * (G->m);
+	int elementsCopy[Matrixelemente];
+
+	//kopiere elements-Array
+	for(int i = 0, i < Matrixelemente; i++){
+		elementsCopy[i] = elements[i];
+	}
+	
+	for(int i = f->n-1; i >= 0 ; i--){
+
+		if(elementsCopy[i] <= f -> i){
+			counter1++;
+		}
+	}
+	if(counter1 == f -> n){
+			counter2++;
+	}
+	*/
+
+	else{
+		return 0;
+	}
 }
 
 int check_allocation(matrix* B, matrix* R, matrix* f, matrix* allocation, unsigned int ID)
